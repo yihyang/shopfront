@@ -10,6 +10,14 @@ Note: The _italic_ fields has not been implemented yet.
 
 Product attributes (based on it's type) can be defined based on the fields defined in ProductType.
 
+## Screencasts
+
+- Definining new Product Type and specify a dynamic attributes:
+  ![Defining new Product Type](screencasts/product-types-new.gif)
+
+- Updating existing Product Type and add a new dynamic attributes:
+  ![Updating existingProduct Type](screencasts/product-types-edit.gif)
+
 ## ToDos
 
 - Translatable fields
