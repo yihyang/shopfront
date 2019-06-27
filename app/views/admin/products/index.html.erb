@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @product_type.name %> Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Slug</th>
+      <th>Numbers</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.slug %></td>
+        <td>
+          <% JSON.parse(@product_type.numbers).each do |key, value| %>
+            <%= key %>
+            <%= product.numbers[key] %>
+            <br>
+          <% end %>
+        </td>
+        <td><%= link_to 'Show', admin_product_path(product, product_type_slug: @product_type.slug) %></td>
+        <td><%= link_to 'Edit', edit_admin_product_path(product, product_type_slug: @product_type.slug) %></td>
+        <td><%= link_to 'Destroy', admin_product_path(product, product_type_slug: @product_type.slug), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '<- Go To All Product Types menu', admin_product_types_path %>
+<br>
+<%= link_to 'New Product', new_admin_product_path %>
