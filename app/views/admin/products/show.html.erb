@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <td><%= @product.name %></td>
+  </tr>
+
+  <tr>
+    <th>Name</th>
+    <td><%= @product.slug %></td>
+  </tr>
+
+  <tr>
+    <th>Numbers</th>
+    <td><%= @product.numbers %></td>
+  </tr>
+
+  <tr>
+    <th>Strings</th>
+    <td><%= @product.strings %></td>
+  </tr>
+</table>
+
+<%= link_to 'Edit', edit_admin_product_path(@product, product_type_slug: @product_type.slug) %> |
+<%= link_to 'Back', admin_products_path(product_type_slug: @product_type.slug) %>
