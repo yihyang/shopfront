@@ -20,6 +20,7 @@ Product attributes (based on it's type) can be defined based on the fields defin
 
 ## ToDos
 
+- Basic Product Front End
 - Translatable fields
 - Sortable fields
 - Sortable features
